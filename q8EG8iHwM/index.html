@@ -1,0 +1,237 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>如何做精密度验证 | 检验大叔</title>
+<link rel="shortcut icon" href="https://www.jianyandashu.com/favicon.ico?v=1637495865899">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://www.jianyandashu.com/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="如何做精密度验证 | 检验大叔 - Atom Feed" href="https://www.jianyandashu.com/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="简单的说明
+
+可以参照根据EP文件或者WST文件中的示例，他们倆的区别是EP的示例讲的比较具体，步骤相对复杂一些。
+这里就引用EP的示例，按步骤来讲解一下。
+
+
+所谓的精密度，就是重复性，所以就要重复做，按照文件要求，需要每天做的叫做批间，..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://www.jianyandashu.com">
+  <img class="avatar" src="https://www.jianyandashu.com/images/avatar.png?v=1637495865899" alt="">
+  </a>
+  <h1 class="site-title">
+    检验大叔
+  </h1>
+  <p class="site-description">
+    人的学习是无止境的,只有不断的学习,才能给自己更丰富,更开阔的思路.
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="https://www.jianyandashu.com/DGCrQQsYI" class="menu">
+          性能验证助手
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              如何做精密度验证
+            </h2>
+            <div class="post-info">
+              <span>
+                2021-11-21
+              </span>
+              <span>
+                3 min read
+              </span>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <h3 id="简单的说明">简单的说明</h3>
+<blockquote>
+<p>可以参照根据EP文件或者WST文件中的示例，他们倆的区别是EP的示例讲的比较具体，步骤相对复杂一些。<br>
+这里就引用EP的示例，按步骤来讲解一下。</p>
+</blockquote>
+<blockquote>
+<p>所谓的精密度，就是重复性，所以就要重复做，按照文件要求，需要每天做的叫做批间，一天之内做的叫做批内，我们选取一个浓度样本，连续做5天，每天做3次，这样就形成了15个结果，不过还需要至少2个浓度。</p>
+</blockquote>
+<h3 id="示例记录表">示例记录表</h3>
+<blockquote>
+<p>​	这里还是以一个浓度为例，如下图。</p>
+<figure data-type="image" tabindex="1"><img src="https://img.jianyandashu.com/20211121195107.png" alt="" loading="lazy"></figure>
+<p>Run代表批次，也就是天的意思，Replicate代表重复，可以看到每天有3次。</p>
+<p>之后我们需要进行一些列的计算。</p>
+</blockquote>
+<h3 id="开始计算">开始计算</h3>
+<blockquote>
+<p>总的均值计算公式如下:</p>
+<figure data-type="image" tabindex="2"><img src="https://img.jianyandashu.com/20211121195222.png" alt="" loading="lazy"></figure>
+<p>批内标准差的计算如下：（注意一下，r代表run的意思，这里的Sr计算好了之后，需要和厂家声明的批内精密度比较。）</p>
+<figure data-type="image" tabindex="3"><img src="https://img.jianyandashu.com/20211121195255.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><img src="https://img.jianyandashu.com/20211121195308.png" alt="" loading="lazy"></figure>
+<p>实验室内的标准差计算如下：（Swl，其中wl代表within-laboratory，计算好了之后，需要和厂家声明的总精密度比较。仔细判断公式不难发现，总精密度约等于批内+批间，具体看下面的公式）</p>
+<figure data-type="image" tabindex="5"><img src="https://img.jianyandashu.com/20211121195343.png" alt="" loading="lazy"></figure>
+</blockquote>
+<h3 id="进入验证声明了">进入验证声明了</h3>
+<blockquote>
+<p>前面的括号里已经提了一点了，我们再来仔细分一遍。</p>
+<figure data-type="image" tabindex="6"><img src="https://img.jianyandashu.com/20211121195417.png" alt="" loading="lazy"></figure>
+<p>如上面所述，如果Sr得到验证，那么代表通过，否者，还需要进行下一步验证（计算验证值），</p>
+<figure data-type="image" tabindex="7"><img src="https://img.jianyandashu.com/20211121195434.png" alt="" loading="lazy"></figure>
+</blockquote>
+<h3 id="实验室内标准差">实验室内标准差</h3>
+<blockquote>
+<p>和上面的批内是差不多，也是先进行实验室内标准差S1与声明作比较，如果不符，那么进行验证值的计算，再比较。</p>
+<figure data-type="image" tabindex="8"><img src="https://img.jianyandashu.com/20211121195501.png" alt="" loading="lazy"></figure>
+<p>计算验证值的时候，与之前稍有不同</p>
+<figure data-type="image" tabindex="9"><img src="https://img.jianyandashu.com/20211121195516.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="10"><img src="https://img.jianyandashu.com/20211121195527.png" alt="" loading="lazy"></figure>
+<p>如果实验室标准差S1小于上面的验证值，那么代表通过。否者验证失败。</p>
+</blockquote>
+<h3 id="总结">总结</h3>
+<blockquote>
+<p>所以精密度的验证包含，批内精密度的验证和总精密度的验证。而在WST中，他的验证值计算过程省略了中间的很多步骤，他直接计算出验证值，然后实验室的标准差在验证值以内，那么就代表通过，而EP文件的验证过程更仔细，让读者非常清楚的知道整个验证过程。</p>
+</blockquote>
+<h3 id="思维导图">思维导图</h3>
+<blockquote>
+<p>我把整个验证过程画成了一幅思维导图，可以一起看看。</p>
+<figure data-type="image" tabindex="11"><img src="https://img.jianyandashu.com/20211121195614.png" alt="" loading="lazy"></figure>
+</blockquote>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E7%AE%80%E5%8D%95%E7%9A%84%E8%AF%B4%E6%98%8E">简单的说明</a></li>
+<li><a href="#%E7%A4%BA%E4%BE%8B%E8%AE%B0%E5%BD%95%E8%A1%A8">示例记录表</a></li>
+<li><a href="#%E5%BC%80%E5%A7%8B%E8%AE%A1%E7%AE%97">开始计算</a></li>
+<li><a href="#%E8%BF%9B%E5%85%A5%E9%AA%8C%E8%AF%81%E5%A3%B0%E6%98%8E%E4%BA%86">进入验证声明了</a></li>
+<li><a href="#%E5%AE%9E%E9%AA%8C%E5%AE%A4%E5%86%85%E6%A0%87%E5%87%86%E5%B7%AE">实验室内标准差</a></li>
+<li><a href="#%E6%80%BB%E7%BB%93">总结</a></li>
+<li><a href="#%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE">思维导图</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://www.jianyandashu.com/DUc6M6Iaa/">
+              <h3 class="post-title">
+                为什么要做精密度验证
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by &nbsp;<a href="https://www.jianyandashu.com" target="_blank">jianyandashu.com</a>
+  <a class="rss" href="https://www.jianyandashu.com/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

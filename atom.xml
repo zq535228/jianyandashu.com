@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.jianyandashu.com</id>
     <title>检验大叔</title>
-    <updated>2021-11-21T11:44:20.493Z</updated>
+    <updated>2021-11-21T11:57:48.975Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.jianyandashu.com"/>
     <link rel="self" href="https://www.jianyandashu.com/atom.xml"/>
@@ -10,6 +10,64 @@
     <logo>https://www.jianyandashu.com/images/avatar.png</logo>
     <icon>https://www.jianyandashu.com/favicon.ico</icon>
     <rights>All rights reserved 2021, 检验大叔</rights>
+    <entry>
+        <title type="html"><![CDATA[如何做精密度验证]]></title>
+        <id>https://www.jianyandashu.com/q8EG8iHwM/</id>
+        <link href="https://www.jianyandashu.com/q8EG8iHwM/">
+        </link>
+        <updated>2021-11-21T11:57:02.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="简单的说明">简单的说明</h3>
+<blockquote>
+<p>可以参照根据EP文件或者WST文件中的示例，他们倆的区别是EP的示例讲的比较具体，步骤相对复杂一些。<br>
+这里就引用EP的示例，按步骤来讲解一下。</p>
+</blockquote>
+<blockquote>
+<p>所谓的精密度，就是重复性，所以就要重复做，按照文件要求，需要每天做的叫做批间，一天之内做的叫做批内，我们选取一个浓度样本，连续做5天，每天做3次，这样就形成了15个结果，不过还需要至少2个浓度。</p>
+</blockquote>
+<h3 id="示例记录表">示例记录表</h3>
+<blockquote>
+<p>​	这里还是以一个浓度为例，如下图。</p>
+<figure data-type="image" tabindex="1"><img src="https://img.jianyandashu.com/20211121195107.png" alt="" loading="lazy"></figure>
+<p>Run代表批次，也就是天的意思，Replicate代表重复，可以看到每天有3次。</p>
+<p>之后我们需要进行一些列的计算。</p>
+</blockquote>
+<h3 id="开始计算">开始计算</h3>
+<blockquote>
+<p>总的均值计算公式如下:</p>
+<figure data-type="image" tabindex="2"><img src="https://img.jianyandashu.com/20211121195222.png" alt="" loading="lazy"></figure>
+<p>批内标准差的计算如下：（注意一下，r代表run的意思，这里的Sr计算好了之后，需要和厂家声明的批内精密度比较。）</p>
+<figure data-type="image" tabindex="3"><img src="https://img.jianyandashu.com/20211121195255.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><img src="https://img.jianyandashu.com/20211121195308.png" alt="" loading="lazy"></figure>
+<p>实验室内的标准差计算如下：（Swl，其中wl代表within-laboratory，计算好了之后，需要和厂家声明的总精密度比较。仔细判断公式不难发现，总精密度约等于批内+批间，具体看下面的公式）</p>
+<figure data-type="image" tabindex="5"><img src="https://img.jianyandashu.com/20211121195343.png" alt="" loading="lazy"></figure>
+</blockquote>
+<h3 id="进入验证声明了">进入验证声明了</h3>
+<blockquote>
+<p>前面的括号里已经提了一点了，我们再来仔细分一遍。</p>
+<figure data-type="image" tabindex="6"><img src="https://img.jianyandashu.com/20211121195417.png" alt="" loading="lazy"></figure>
+<p>如上面所述，如果Sr得到验证，那么代表通过，否者，还需要进行下一步验证（计算验证值），</p>
+<figure data-type="image" tabindex="7"><img src="https://img.jianyandashu.com/20211121195434.png" alt="" loading="lazy"></figure>
+</blockquote>
+<h3 id="实验室内标准差">实验室内标准差</h3>
+<blockquote>
+<p>和上面的批内是差不多，也是先进行实验室内标准差S1与声明作比较，如果不符，那么进行验证值的计算，再比较。</p>
+<figure data-type="image" tabindex="8"><img src="https://img.jianyandashu.com/20211121195501.png" alt="" loading="lazy"></figure>
+<p>计算验证值的时候，与之前稍有不同</p>
+<figure data-type="image" tabindex="9"><img src="https://img.jianyandashu.com/20211121195516.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="10"><img src="https://img.jianyandashu.com/20211121195527.png" alt="" loading="lazy"></figure>
+<p>如果实验室标准差S1小于上面的验证值，那么代表通过。否者验证失败。</p>
+</blockquote>
+<h3 id="总结">总结</h3>
+<blockquote>
+<p>所以精密度的验证包含，批内精密度的验证和总精密度的验证。而在WST中，他的验证值计算过程省略了中间的很多步骤，他直接计算出验证值，然后实验室的标准差在验证值以内，那么就代表通过，而EP文件的验证过程更仔细，让读者非常清楚的知道整个验证过程。</p>
+</blockquote>
+<h3 id="思维导图">思维导图</h3>
+<blockquote>
+<p>我把整个验证过程画成了一幅思维导图，可以一起看看。</p>
+<figure data-type="image" tabindex="11"><img src="https://img.jianyandashu.com/20211121195614.png" alt="" loading="lazy"></figure>
+</blockquote>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[为什么要做精密度验证]]></title>
         <id>https://www.jianyandashu.com/DUc6M6Iaa/</id>
