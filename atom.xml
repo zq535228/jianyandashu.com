@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://www.jianyandashu.com</id>
+    <title>检验大叔</title>
+    <updated>2021-11-21T11:44:20.493Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://www.jianyandashu.com"/>
+    <link rel="self" href="https://www.jianyandashu.com/atom.xml"/>
+    <subtitle>人的学习是无止境的,只有不断的学习,才能给自己更丰富,更开阔的思路.</subtitle>
+    <logo>https://www.jianyandashu.com/images/avatar.png</logo>
+    <icon>https://www.jianyandashu.com/favicon.ico</icon>
+    <rights>All rights reserved 2021, 检验大叔</rights>
+    <entry>
+        <title type="html"><![CDATA[为什么要做精密度验证]]></title>
+        <id>https://www.jianyandashu.com/DUc6M6Iaa/</id>
+        <link href="https://www.jianyandashu.com/DUc6M6Iaa/">
+        </link>
+        <updated>2021-11-21T11:09:07.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="精密度验证为何如此重要">精密度验证为何如此重要</h3>
+<blockquote>
+<p>很多大咖都已经讲了很多，这里就简单说一下我自己的认知。</p>
+</blockquote>
+<blockquote>
+<p>在性能验证的项目中，为什么将精密度放在第一位？关键是临床实验室在检测患者样品时，对任何分析物或项目都只做一次就发出报告！这是全球临床实验室的特殊分析做法。因此，确保检测结果可靠性的第一前提是：检测结果的精密度要好。也即：同一个样品的再次检测结果是一样的！不然，临床和患者都不会满意。</p>
+</blockquote>
+<h3 id="重复性好就准确">重复性好就“准确”</h3>
+<blockquote>
+<p>当临床和患者对临床实验室的结果有怀疑时，要求临床实验室再做一次。如果，重复检测结果与上次报告的一样，临床与患者都认为，实验室报告的结果是“准确”的！两次结果一样还不准确吗？其实这不是准确度，这是精密度好！因此，在任何时候，确保精密度第一是实验室的首要任务。</p>
+</blockquote>
+<blockquote>
+<p>上面这段话，就是为什么要做精密度验证的答案。</p>
+</blockquote>
+<h3 id="我入坑的过程">我入坑的过程</h3>
+<blockquote>
+<p>在我们科室筹备15189认可的过程中，就已经有老师在探讨关于性能验证的话题，不过由于当时的精力有限，没有进一步跟进，但我已经埋下了一个问号。而今年有时间了解了几款关于性能验证的软件后，发现他们都是有缺陷的，web的版本操作特别麻烦，交互能力还是不足，还有一款（某涞）也是存在重大的bug（可能是由于长时间未升级的原因）。不过即便是你知晓了试验的操作和数据的录入，报告的生成。这也仅仅是完成了任务而已，对于其中的计算过程，却毫无知情，这明显不是我的风格。</p>
+</blockquote>
+<h3 id="正式确立开发软件">正式确立开发软件</h3>
+<blockquote>
+<p>鉴于以上的各种原因，我决定：自己开发一套这样的软件，在学习其中的复杂的验证过程，开发完成后也方便自己，更方便各位检验同行。</p>
+</blockquote>
+<blockquote>
+<p>在黎明新主任的带队下，我们的开发小组成立了，这也算是正式进入性能验证领域这个坑儿了。</p>
+</blockquote>
+]]></content>
+    </entry>
+</feed>
