@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.jianyandashu.com</id>
     <title>检验大叔</title>
-    <updated>2021-11-21T12:00:23.574Z</updated>
+    <updated>2021-11-21T12:01:05.927Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.jianyandashu.com"/>
     <link rel="self" href="https://www.jianyandashu.com/atom.xml"/>
@@ -84,6 +84,14 @@
         <link href="https://www.jianyandashu.com/DUc6M6Iaa/">
         </link>
         <updated>2021-11-21T11:09:07.000Z</updated>
+        <summary type="html"><![CDATA[<h3 id="精密度验证为何如此重要">精密度验证为何如此重要</h3>
+<blockquote>
+<p>很多大咖都已经讲了很多，这里就简单说一下我自己的认知。</p>
+</blockquote>
+<blockquote>
+<p>在性能验证的项目中，为什么将精密度放在第一位？关键是临床实验室在检测患者样品时，对任何分析物或项目都只做一次就发出报告！这是全球临床实验室的特殊分析做法。因此，确保检测结果可靠性的第一前提是：检测结果的精密度要好。也即：同一个样品的再次检测结果是一样的！不然，临床和患者都不会满意。</p>
+</blockquote>
+]]></summary>
         <content type="html"><![CDATA[<h3 id="精密度验证为何如此重要">精密度验证为何如此重要</h3>
 <blockquote>
 <p>很多大咖都已经讲了很多，这里就简单说一下我自己的认知。</p>
@@ -91,6 +99,7 @@
 <blockquote>
 <p>在性能验证的项目中，为什么将精密度放在第一位？关键是临床实验室在检测患者样品时，对任何分析物或项目都只做一次就发出报告！这是全球临床实验室的特殊分析做法。因此，确保检测结果可靠性的第一前提是：检测结果的精密度要好。也即：同一个样品的再次检测结果是一样的！不然，临床和患者都不会满意。</p>
 </blockquote>
+<!-- more -->
 <h3 id="重复性好就准确">重复性好就“准确”</h3>
 <blockquote>
 <p>当临床和患者对临床实验室的结果有怀疑时，要求临床实验室再做一次。如果，重复检测结果与上次报告的一样，临床与患者都认为，实验室报告的结果是“准确”的！两次结果一样还不准确吗？其实这不是准确度，这是精密度好！因此，在任何时候，确保精密度第一是实验室的首要任务。</p>
