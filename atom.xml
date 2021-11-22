@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.jianyandashu.com</id>
     <title>检验大叔</title>
-    <updated>2021-11-21T12:03:54.472Z</updated>
+    <updated>2021-11-22T13:21:10.452Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.jianyandashu.com"/>
     <link rel="self" href="https://www.jianyandashu.com/atom.xml"/>
@@ -10,6 +10,72 @@
     <logo>https://www.jianyandashu.com/images/avatar.png</logo>
     <icon>https://www.jianyandashu.com/favicon.ico</icon>
     <rights>All rights reserved 2021, 检验大叔</rights>
+    <entry>
+        <title type="html"><![CDATA[为什么要做线性验证]]></title>
+        <id>https://www.jianyandashu.com/Gce8qUorT/</id>
+        <link href="https://www.jianyandashu.com/Gce8qUorT/">
+        </link>
+        <updated>2021-11-22T13:15:07.000Z</updated>
+        <summary type="html"><![CDATA[<blockquote>
+<p>所谓的线性验证,就是对已知的分析物浓度x坐标,与系统最终输出的结果y,成正比的范围.</p>
+</blockquote>
+<blockquote>
+<p>因为所有的结果都是通过仪器的光电信号定标曲线换算而来,所以我们所有的x在经过了定标曲线的换算成y.如果发现了xy不能在验证的范围内成对应关系(线性),也就代表着您的检测系统出现问题.</p>
+</blockquote>
+<blockquote>
+<p>因为检测系统在定标的过程中一般都不会做线性验证这么多数据点的.所以在两点定标的系统中,要定期做线性的验证,来评估系统的状态.(我记得看过一篇文章,说是两点定标的系统推荐半年做一次线性验证)</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<blockquote>
+<p>所谓的线性验证,就是对已知的分析物浓度x坐标,与系统最终输出的结果y,成正比的范围.</p>
+</blockquote>
+<blockquote>
+<p>因为所有的结果都是通过仪器的光电信号定标曲线换算而来,所以我们所有的x在经过了定标曲线的换算成y.如果发现了xy不能在验证的范围内成对应关系(线性),也就代表着您的检测系统出现问题.</p>
+</blockquote>
+<blockquote>
+<p>因为检测系统在定标的过程中一般都不会做线性验证这么多数据点的.所以在两点定标的系统中,要定期做线性的验证,来评估系统的状态.(我记得看过一篇文章,说是两点定标的系统推荐半年做一次线性验证)</p>
+</blockquote>
+<!-- more -->
+<h2 id="amr和crr">AMR和CRR</h2>
+<blockquote>
+<p>我们验证的范围,一般可以分成两种,分析测量范围AMR（analytical measurement range）和临床可报告范围CRR（clinical reportable range），一个是未对患者样本处理，一个是经过可经过了浓缩稀释等处理的报告范围。</p>
+</blockquote>
+<blockquote>
+<p>分析测量范围是整个检测系统对应于系列分析物浓度的仪器最终输出的信号间是否呈恒定比例的性能。</p>
+</blockquote>
+<h2 id="验证amr范围内是否符合线性">验证AMR范围内是否符合线性</h2>
+<blockquote>
+<p>那么这里的重点就是如何进行XY坐标的各个点的线性验证.这里有两种方法.</p>
+<blockquote>
+<p>1\平均斜率法,一般认为y=ax+b,b应该在1.00±0.03,R^2&gt;0.95,一个是截距的范围,一个是皮尔逊相关系数.<br>
+<img src="https://img.jianyandashu.com/img/20211122211757.png" alt="" loading="lazy"><br>
+2\多项式回归法,这其中要进行三步操作:(1) 精密度分析(2) Ca多项式回归表格(3) 三次多项式和一次多项式预期及线性偏差</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>① 如果偏差较大，发生在头尾的浓度，那么去掉该浓度</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>② 重新分析，分析测量范围自然也缩小一个点。</p>
+</blockquote>
+</blockquote>
+<p>这里我介绍的有点粗糙,在具体计算过程是所有的性能验证中最复杂的一个,我在这个地方请教了好多位老师,有统计学老师有其他医院的同行,最后我把里面需要的函数都封装到了检验科性能验证助手中.所以,后来的人就方便许多了.</p>
+<p>验证了分析测量范围(AMR)后，可以得出；得到AMR的上下限,及我们在设计试验时候适用的H和L.</p>
+</blockquote>
+<h2 id="推算crr">推算CRR</h2>
+<blockquote>
+<p>有上面的AMR可以进一步的对系统进行评估,因为有一些超出了AMR范围的标本结果,也是对临床有意义的.所以就要对高浓度样本进行稀释,那如何验证呢?有一个试验就叫做回收试验。标本稀释后的检测浓度最低限（回收率在78.1%-117.2%之内的预期值）</p>
+</blockquote>
+<blockquote>
+<p>经过了这样的折腾后,可以得到:<br>
+稀释后的检测浓度最低限<br>
+最大稀释倍数（如200倍）<br>
+CRR的上限=最大稀释倍数*AMR的上限</p>
+</blockquote>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[如何做精密度验证]]></title>
         <id>https://www.jianyandashu.com/q8EG8iHwM/</id>

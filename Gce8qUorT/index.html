@@ -1,0 +1,227 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>为什么要做线性验证 | 检验大叔</title>
+<link rel="shortcut icon" href="https://www.jianyandashu.com/favicon.ico?v=1637587264216">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://www.jianyandashu.com/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="为什么要做线性验证 | 检验大叔 - Atom Feed" href="https://www.jianyandashu.com/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="
+所谓的线性验证,就是对已知的分析物浓度x坐标,与系统最终输出的结果y,成正比的范围.
+
+
+因为所有的结果都是通过仪器的光电信号定标曲线换算而来,所以我们所有的x在经过了定标曲线的换算成y.如果发现了xy不能在验证的范围内成对应关系(线性)..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://www.jianyandashu.com">
+  <img class="avatar" src="https://www.jianyandashu.com/images/avatar.png?v=1637587264216" alt="">
+  </a>
+  <h1 class="site-title">
+    检验大叔
+  </h1>
+  <p class="site-description">
+    人的学习是无止境的,只有不断的学习,才能给自己更丰富,更开阔的思路.
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="https://www.jianyandashu.com/DGCrQQsYI" class="menu">
+          性能验证助手
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              为什么要做线性验证
+            </h2>
+            <div class="post-info">
+              <span>
+                2021-11-22
+              </span>
+              <span>
+                3 min read
+              </span>
+              
+            </div>
+            
+              <img class="post-feature-image" src="https://img.jianyandashu.com/img/20211122212039.png" alt="">
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <blockquote>
+<p>所谓的线性验证,就是对已知的分析物浓度x坐标,与系统最终输出的结果y,成正比的范围.</p>
+</blockquote>
+<blockquote>
+<p>因为所有的结果都是通过仪器的光电信号定标曲线换算而来,所以我们所有的x在经过了定标曲线的换算成y.如果发现了xy不能在验证的范围内成对应关系(线性),也就代表着您的检测系统出现问题.</p>
+</blockquote>
+<blockquote>
+<p>因为检测系统在定标的过程中一般都不会做线性验证这么多数据点的.所以在两点定标的系统中,要定期做线性的验证,来评估系统的状态.(我记得看过一篇文章,说是两点定标的系统推荐半年做一次线性验证)</p>
+</blockquote>
+<!-- more -->
+<h2 id="amr和crr">AMR和CRR</h2>
+<blockquote>
+<p>我们验证的范围,一般可以分成两种,分析测量范围AMR（analytical measurement range）和临床可报告范围CRR（clinical reportable range），一个是未对患者样本处理，一个是经过可经过了浓缩稀释等处理的报告范围。</p>
+</blockquote>
+<blockquote>
+<p>分析测量范围是整个检测系统对应于系列分析物浓度的仪器最终输出的信号间是否呈恒定比例的性能。</p>
+</blockquote>
+<h2 id="验证amr范围内是否符合线性">验证AMR范围内是否符合线性</h2>
+<blockquote>
+<p>那么这里的重点就是如何进行XY坐标的各个点的线性验证.这里有两种方法.</p>
+<blockquote>
+<p>1\平均斜率法,一般认为y=ax+b,b应该在1.00±0.03,R^2&gt;0.95,一个是截距的范围,一个是皮尔逊相关系数.<br>
+<img src="https://img.jianyandashu.com/img/20211122211757.png" alt="" loading="lazy"><br>
+2\多项式回归法,这其中要进行三步操作:(1) 精密度分析(2) Ca多项式回归表格(3) 三次多项式和一次多项式预期及线性偏差</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>① 如果偏差较大，发生在头尾的浓度，那么去掉该浓度</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>② 重新分析，分析测量范围自然也缩小一个点。</p>
+</blockquote>
+</blockquote>
+<p>这里我介绍的有点粗糙,在具体计算过程是所有的性能验证中最复杂的一个,我在这个地方请教了好多位老师,有统计学老师有其他医院的同行,最后我把里面需要的函数都封装到了检验科性能验证助手中.所以,后来的人就方便许多了.</p>
+<p>验证了分析测量范围(AMR)后，可以得出；得到AMR的上下限,及我们在设计试验时候适用的H和L.</p>
+</blockquote>
+<h2 id="推算crr">推算CRR</h2>
+<blockquote>
+<p>有上面的AMR可以进一步的对系统进行评估,因为有一些超出了AMR范围的标本结果,也是对临床有意义的.所以就要对高浓度样本进行稀释,那如何验证呢?有一个试验就叫做回收试验。标本稀释后的检测浓度最低限（回收率在78.1%-117.2%之内的预期值）</p>
+</blockquote>
+<blockquote>
+<p>经过了这样的折腾后,可以得到:<br>
+稀释后的检测浓度最低限<br>
+最大稀释倍数（如200倍）<br>
+CRR的上限=最大稀释倍数*AMR的上限</p>
+</blockquote>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#amr%E5%92%8Ccrr">AMR和CRR</a></li>
+<li><a href="#%E9%AA%8C%E8%AF%81amr%E8%8C%83%E5%9B%B4%E5%86%85%E6%98%AF%E5%90%A6%E7%AC%A6%E5%90%88%E7%BA%BF%E6%80%A7">验证AMR范围内是否符合线性</a></li>
+<li><a href="#%E6%8E%A8%E7%AE%97crr">推算CRR</a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://www.jianyandashu.com/q8EG8iHwM/">
+              <h3 class="post-title">
+                如何做精密度验证
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by &nbsp;<a href="https://www.jianyandashu.com" target="_blank">jianyandashu.com</a>
+  <a class="rss" href="https://www.jianyandashu.com/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
