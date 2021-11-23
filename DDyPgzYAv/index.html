@@ -1,0 +1,257 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>性能验证@正确度验证 | 检验大叔</title>
+<link rel="shortcut icon" href="https://www.jianyandashu.com/favicon.ico?v=1637674380334">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://www.jianyandashu.com/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="性能验证@正确度验证 | 检验大叔 - Atom Feed" href="https://www.jianyandashu.com/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="
+前文说了精密度的一些内容,这次就聊一聊正确度,他们俩都是直接影响着患者的诊断与资料.都取决于检验结果(我们发出去的报告单),所以我们对定量测定项目的精密度和正确度性能验证显得十分必要.
+
+
+
+正确度代表的是系统误差,以偏倚表示.有两种方法..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://www.jianyandashu.com">
+  <img class="avatar" src="https://www.jianyandashu.com/images/avatar.png?v=1637674380334" alt="">
+  </a>
+  <h1 class="site-title">
+    检验大叔
+  </h1>
+  <p class="site-description">
+    人的学习是无止境的,只有不断的学习,才能给自己更丰富,更开阔的思路.
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="https://www.jianyandashu.com/DGCrQQsYI" class="menu">
+          性能验证助手
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              性能验证@正确度验证
+            </h2>
+            <div class="post-info">
+              <span>
+                2021-11-23
+              </span>
+              <span>
+                4 min read
+              </span>
+              
+            </div>
+            
+              <img class="post-feature-image" src="https://www.jianyandashu.com/post-images/DDyPgzYAv.jpeg" alt="">
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <blockquote>
+<p>前文说了精密度的一些内容,这次就聊一聊正确度,他们俩都是直接影响着患者的诊断与资料.都取决于检验结果(我们发出去的报告单),所以我们对定量测定项目的精密度和正确度性能验证显得十分必要.</p>
+</blockquote>
+<!-- more -->
+<blockquote>
+<p>正确度代表的是系统误差,以偏倚表示.有两种方法来验证,包括比对试验和测量标准物质来评价系统误差(正确度)是否满足厂商声明的正确度要求.</p>
+</blockquote>
+<p>###正确度举例</p>
+<blockquote>
+<figure data-type="image" tabindex="1"><img src="https://img.jianyandashu.com/img/1947493-20211113112510242-1689968879.png" alt="image" loading="lazy"></figure>
+</blockquote>
+<blockquote>
+<p>这里我再举一个例子说明一下,可能会更直观易懂些.例如,我们打靶,打了200次,那么这200次就会产生一个范围,范围的大小(离散程度,用不精密度来表示),打靶产生的这个正态分布的中心,和标准的靶心,之间的偏倚,就是我们要测量的正确度.如果这个偏倚太大太多,显然就不满足正确度的要求了.<br>
+<img src="https://img.jianyandashu.com/img/1947493-20211113112610192-1590851493.png" alt="" loading="lazy"></p>
+</blockquote>
+<p>对于这样的一个非常重要的参数(正确度),我们是如何来验证的呢?</p>
+<p>###参考规范</p>
+<blockquote>
+<p>和前面的精密度验证一样,在WST492和EP15A2中有详细的介绍.不过这两个文件的结果验证部分都有错误之处.</p>
+</blockquote>
+<p>###方法A</p>
+<blockquote>
+<p>方法A,聚集有指定值的参考物质.包括,具有互换性的有证参考物质(室间质评样本),具有溯源性及互换性的正确度验证物质(例如定标液).<br>
+我们选择2个浓度的参考物质,用3-5天每个浓度每天做2次测定,然后计算均值\标准差,以及置信区间帮助验证指定值.</p>
+</blockquote>
+<blockquote>
+<p>其中的一个浓度的数据稿如下图,当然您也可以每天重复三次,EP15文件就是3次重复.<br>
+<img src="https://img.jianyandashu.com/img/1947493-20211113120210381-2100259930.png" alt="image" loading="lazy"></p>
+</blockquote>
+<p>###方法A计算过程</p>
+<blockquote>
+<p>计算均值公式如下:<br>
+<img src="https://img.jianyandashu.com/img/1947493-20211113122108577-823568704.png" alt="image" loading="lazy"></p>
+</blockquote>
+<blockquote>
+<p>计算方差标准差公式如下:<br>
+<img src="https://img.jianyandashu.com/img/1947493-20211113122142529-115339608.png" alt="image" loading="lazy"></p>
+</blockquote>
+<p>###方法A的EP15A2和WST492中的错误</p>
+<blockquote>
+<p>这个置信区间的就按EP文件和WST文件均有错误<br>
+<img src="https://img.jianyandashu.com/img/1947493-20211113171832612-4060135.png" alt="image" loading="lazy"></p>
+</blockquote>
+<blockquote>
+<p>EP15A2的t检验分布的应该查询双尾的,而上面的例子,查的是单尾的.</p>
+</blockquote>
+<blockquote>
+<p>在WST492中,查询的是双尾的,但p的概率写错了,a=0.01对应的概率是99%的置信区间.<br>
+<img src="https://img.jianyandashu.com/img/1947493-20211113171914333-1415977258.png" alt="image" loading="lazy"></p>
+</blockquote>
+<p>###方法A置信区间的验证</p>
+<blockquote>
+<p>最后用这个置信区间的公式来计算区间范围,注意一点,这里的Sa是给定的,当然把这个Sa加进去,范围置信区间的范围会大一些,所以也可以直接加入,不过有时候,我们获得这个值不是太方便.也可以先不加入,而直接用Sx来验证.<br>
+<img src="https://img.jianyandashu.com/img/1947493-20211113122733680-16256879.png" alt="image" loading="lazy"></p>
+</blockquote>
+<blockquote>
+<p>如果区间包含了参考物质的定值,那么正确度的验证成功,否则失败.</p>
+</blockquote>
+<p>###方法B</p>
+<blockquote>
+<p>使用患者样本的正确度验证方案.由于上一个方法可能会无法选择参考物质或者没有那么多室间质评样本或项目等原因.用患者样本做比对也是一种不错的方案.实际上这种验证方案,是两种方法之间的系统误差.<br>
+检测20分患者样本,浓度覆盖检测方法的可报告范围.在3-4天内完成,每天完成5-7份样本.</p>
+</blockquote>
+<p>###方法B数据收集</p>
+<blockquote>
+<figure data-type="image" tabindex="2"><img src="https://img.jianyandashu.com/img/1947493-20211113192559927-1091706610.png" alt="image" loading="lazy"></figure>
+</blockquote>
+<blockquote>
+<p>如图,这就是20份样本在2个系统中的结果.<br>
+我对比了EP15A2和492文件的具体内容,492中的算法有部分是多于的.例如他计算了试验方法的置信区间,是没有意义的.应该计算的是厂家的声明偏倚的置信区间.<br>
+<img src="https://img.jianyandashu.com/img/1947493-20211113201756040-155986333.png" alt="image" loading="lazy"></p>
+</blockquote>
+<p>###方法B计算公式</p>
+<blockquote>
+<p>这里就再列出EP文件中几个计算公式<br>
+<img src="https://img.jianyandashu.com/img/1947493-20211113201903645-1327924940.png" alt="image" loading="lazy"><br>
+<img src="https://img.jianyandashu.com/img/1947493-20211113201921557-984232707.png" alt="image" loading="lazy"></p>
+</blockquote>
+<p>###方法B的优化</p>
+<blockquote>
+<p>最后我在做一点补充,也是我自己的想法,对这个验证的改进.也就是用%来表示偏倚更好\更直观\更符合国人的审美.<br>
+<img src="https://img.jianyandashu.com/img/1947493-20211113205717696-191904412.png" alt="image" loading="lazy"></p>
+</blockquote>
+<blockquote>
+<figure data-type="image" tabindex="3"><img src="https://img.jianyandashu.com/img/1947493-20211113205352439-859965742.png" alt="image" loading="lazy"></figure>
+</blockquote>
+
+              </div>
+              <div class="toc-container">
+                
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://www.jianyandashu.com/Gce8qUorT/">
+              <h3 class="post-title">
+                性能验证@线性验证
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by &nbsp;<a href="https://www.jianyandashu.com" target="_blank">jianyandashu.com</a>
+  <a class="rss" href="https://www.jianyandashu.com/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
