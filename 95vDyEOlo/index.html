@@ -1,0 +1,222 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>性能验证@线性可报告范围 | 检验大叔</title>
+<link rel="shortcut icon" href="https://www.jianyandashu.com/favicon.ico?v=1638797940191">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://www.jianyandashu.com/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="性能验证@线性可报告范围 | 检验大叔 - Atom Feed" href="https://www.jianyandashu.com/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="
+所谓的线性验证，就是对已知的分析物浓度x坐标，与系统检测输出的结果y，成正比的范围。
+
+
+这个线性并不是定标曲线的线性，这一定不能搞混。
+不过他们还是有一定联系的，因为所有的结果都是通过仪器的光电信号定标曲线换算而来，所以我们所有的已知浓..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://www.jianyandashu.com">
+  <img class="avatar" src="https://www.jianyandashu.com/images/avatar.png?v=1638797940191" alt="">
+  </a>
+  <h1 class="site-title">
+    检验大叔
+  </h1>
+  <p class="site-description">
+    人的学习是无止境的,只有不断的学习,才能给自己更丰富,更开阔的思路.
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="https://www.jianyandashu.com/DGCrQQsYI" class="menu">
+          性能验证助手
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              性能验证@线性可报告范围
+            </h2>
+            <div class="post-info">
+              <span>
+                2021-12-06
+              </span>
+              <span>
+                4 min read
+              </span>
+              
+            </div>
+            
+              <img class="post-feature-image" src="https://www.jianyandashu.com/post-images/95vDyEOlo.jpeg" alt="">
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <blockquote>
+<p>所谓的线性验证，就是对已知的分析物浓度x坐标，与系统检测输出的结果y，成正比的范围。</p>
+</blockquote>
+<blockquote>
+<p>这个线性并不是定标曲线的线性，这一定不能搞混。</p>
+<p>不过他们还是有一定联系的，因为所有的结果都是通过仪器的光电信号定标曲线换算而来，所以我们所有的已知浓度x在经过了定标曲线的换算成检测结果y。如果发现了xy不能在验证的范围内成对应关系(线性)，也就代表着您的检测系统（定标曲线）出现问题了。</p>
+</blockquote>
+<blockquote>
+<p>因为检测系统在定标的过程中，一般都不会做线性验证这么多数据点的。所以在两点定标的系统中，要定期做线性的验证，来评估系统的状态。（我记得看过一篇文章，说是两点定标的系统推荐半年做一次线性验证）</p>
+<p>说了这么多，那到底线性验证，是在验证什么呢？我们带着这个问题继续往后看。</p>
+</blockquote>
+<!-- more -->
+<h2 id="amr和crr">AMR和CRR</h2>
+<blockquote>
+<p>我们验证的范围，一般可以分成两种，分析测量范围AMR（analytical measurement range）和临床可报告范围CRR（clinical reportable range），一个是未对患者样本处理，一个是经过可经过了浓缩、稀释等处理的报告范围。</p>
+</blockquote>
+<h3 id="验证amr范围内的线性">验证AMR范围内的线性</h3>
+<blockquote>
+<p>那么这里的重点就是如何进行XY坐标的各个点的线性验证。这里有两种方法。</p>
+<p>1、平均斜率法，一般认为y=ax+b，一个是截距的范围，一个是皮尔逊相关系数。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zq535228/img.jianyandashu.com/img/image-20211129201719120.png" alt="" loading="lazy">当然上面的这个判断依据属于经验判断，b应该在1.00±0.03，R^2&gt;0.95。</p>
+<p>2、多项式回归法，这个方法就略微复杂。其中要进行三步计算和分析：(1) 精密度分析，(2) 计算多项式回归数据表格，(3) 多项式和一次多项式预期及线性偏差。</p>
+<p>① 如果偏差较大，发生在头尾的浓度，那么去掉该浓度</p>
+<p>② 重新分析，分析测量范围自然也缩小一个点。</p>
+<p>这里我介绍的有点粗糙，在具体计算过程是我碰到的最复杂的，我在请教了好多位老师，有统计学老师、也有其他医院的同行，前后查询了近30年的关于线性验证的所有论文。似乎我真的卡在了这里？不过最后我还是搞定了，我通过google搜索，最终在excelfunctions.net发现了linest的拟合函数，它可以计算返回一组数据，其中就有我想要的数据。</p>
+<figure data-type="image" tabindex="1"><img src="https://cdn.jsdelivr.net/gh/zq535228/img.jianyandashu.com/img/image-20211129202810641.png" alt="" loading="lazy"></figure>
+<p>验证了分析测量范围（AMR）后，可以得到AMR的上限和下限。</p>
+</blockquote>
+<h2 id="推算临床可报告范围crr">推算临床可报告范围CRR</h2>
+<blockquote>
+<p>有了上面的AMR，可以进一步的对系统进行评估，因为有一些超出了AMR范围的标本结果，很多时候也是对临床有意义的。所以就要对高浓度样本进行稀释，通过回收试验计算回收率。回收率在78.1%-117.2%之内，即为满足要求。</p>
+</blockquote>
+<blockquote>
+<p>经过了这样的一番折腾后，我们可以得到:<br>
+稀释后的检测浓度最低限</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zq535228/img.jianyandashu.com/img/image-20211129203440112.png" alt="" loading="lazy">最大稀释倍数（如下图中的200倍)</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zq535228/img.jianyandashu.com/img/image-20211129203516046.png" alt="" loading="lazy">CRR的上限=最大稀释倍数*AMR的上限</p>
+<p>好了，线性可报告范围也研究明白了。</p>
+</blockquote>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#amr%E5%92%8Ccrr">AMR和CRR</a>
+<ul>
+<li><a href="#%E9%AA%8C%E8%AF%81amr%E8%8C%83%E5%9B%B4%E5%86%85%E7%9A%84%E7%BA%BF%E6%80%A7">验证AMR范围内的线性</a></li>
+</ul>
+</li>
+<li><a href="#%E6%8E%A8%E7%AE%97%E4%B8%B4%E5%BA%8A%E5%8F%AF%E6%8A%A5%E5%91%8A%E8%8C%83%E5%9B%B4crr">推算临床可报告范围CRR</a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://www.jianyandashu.com/S12OO-az9/">
+              <h3 class="post-title">
+                性能验证@正确度
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by &nbsp;<a href="https://www.jianyandashu.com" target="_blank">jianyandashu.com</a>
+  <a class="rss" href="https://www.jianyandashu.com/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
